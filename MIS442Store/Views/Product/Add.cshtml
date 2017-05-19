@@ -1,0 +1,25 @@
+﻿@using MIS442Store.DataLayer.DataModels
+@model Product
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.ProductID)
+    <br>
+    @Html.LabelFor(m => m.ProductName)
+    @Html.TextBoxFor(m => m.ProductName)
+    @Html.ValidationMessageFor(m => m.ProductName)
+    <br>
+    @Html.LabelFor(m => m.ProductCode)
+    @Html.TextBoxFor(m => m.ProductCode)
+    @Html.ValidationMessageFor(m => m.ProductCode)
+    <br>
+    @Html.LabelFor(m => m.ProductVersion)
+    @Html.TextBoxFor(m => m.ProductVersion)
+    @Html.ValidationMessageFor(m => m.ProductVersion)
+    <br>
+    @Html.LabelFor(m => m.ProductReleaseDate)
+    @Html.TextBoxFor(m => m.ProductReleaseDate)
+    @Html.ValidationMessageFor(m => m.ProductReleaseDate)
+    <br>
+    <input class="uxSubmit" type="Submit" value="Submit">
+}

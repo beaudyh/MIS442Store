@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/MISLayout.cshtml";
+    ViewBag.Title = "Registration";
+}
+
+<h1>Registration!</h1>
+@model List<MIS442Store.DataLayer.DataModels.Registration>
+    <div>
+        <p>Welcome to the registration page. You'll have a great time here.</p>
+    </div>
+
+@Html.ActionLink("Add Registration", "AddRegistration", "Registration")
+<table>
+    <thead>
+        <tr>
+            <th>
+                RegistrationID
+            </th>
+            <th>
+                RegistrationDate
+            </th>
+            <th>
+                RegistrationSerialNumber
+            </th>
+            <th>
+                RegistrationUserName
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var regData in Model)
+        {
+            <tr>
+                <td>@regData.RegistrationID</td>
+                <td>@regData.RegistrationDate</td>
+                <td>@regData.RegistrationSerialNumber</td>
+                <td>@regData.RegistrationUserName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<footer>
+    <p>&copy; Beaudy.Harrington<p>
+</footer>

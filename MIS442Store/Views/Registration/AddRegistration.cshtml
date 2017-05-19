@@ -1,0 +1,42 @@
+﻿@using MIS442Store.Models
+@model RegistrationModel
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.HiddenFor(m => m.RegistrationID)
+        <br />
+        @Html.LabelFor(m => m.RegistrationDate)
+        @Html.TextBoxFor(m => m.RegistrationDate)
+        @Html.ValidationMessageFor(m => m.RegistrationDate)
+        <br />
+        @Html.LabelFor(m => m.RegistrationProductID)
+        @Html.TextBoxFor(m => m.RegistrationProductID)
+        @Html.ValidationMessageFor(m => m.RegistrationProductID)
+        <br />
+        @Html.LabelFor(m => m.RegistrationSerialNumber)
+        @Html.TextBoxFor(m => m.RegistrationSerialNumber)
+        @Html.ValidationMessageFor(m => m.RegistrationSerialNumber)
+        <br />
+        @Html.LabelFor(m => m.RegistrationAddress)
+        @Html.TextBoxFor(m => m.RegistrationAddress)
+        @Html.ValidationMessageFor(m => m.RegistrationAddress)
+        <br />
+        @Html.LabelFor(m => m.RegistrationCity)
+        @Html.TextBoxFor(m => m.RegistrationCity)
+        @Html.ValidationMessageFor(m => m.RegistrationCity)
+        <br />
+        @Html.LabelFor(m => m.RegistrationZip)
+        @Html.TextBoxFor(m => m.RegistrationZip)
+        @Html.ValidationMessageFor(m => m.RegistrationZip)
+        <br />
+        @Html.LabelFor(m => m.RegistrationPhone)
+        @Html.TextBoxFor(m => m.RegistrationPhone)
+        @Html.ValidationMessageFor(m => m.RegistrationPhone)
+        <br />
+    </div>
+    @Html.LabelFor(m => m.RegistrationState)
+    @Html.DropDownListFor(m => m.RegistrationState, new SelectList(Model.States, "code", "name"))
+    <br />
+    <input class="uxSubmit" type="Submit" value="Submit">
+}

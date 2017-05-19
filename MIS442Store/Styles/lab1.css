@@ -1,0 +1,61 @@
+thead {color: red;}
+tbody {color: blue;}
+table, th, td {
+border: 1px;
+}
+html {
+	width: 960px;
+	margin: 0px auto;
+}
+h1 {
+	background-color: #003767;
+    color: white;
+	padding: 10px;
+	margin: 0px;
+	text-decoration: underline;
+	text-decoration-color: white;
+}
+h2 {
+	clear: left;
+}
+footer {
+	background-color: #000;
+    color: white;
+}
+footer.foot {
+	color: #fff;
+}
+img {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+iframe{
+	margin: 5px;
+	float: right;
+}
+
+ul {
+	padding: 0px;
+	margin: 0px;
+}
+ul.my-row {
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+ul.my-row > li {
+	display: table-cell;
+	border: 1px;
+	border-style: solid;
+	border-color: gray;
+	padding: 10px;
+}
+p {
+	font-family: Times New Roman, Arial, sans-serif;
+	font-weight: lighter;
+	text-align: justify;
+}
+ol{
+	list-style: upper-roman;
+}
